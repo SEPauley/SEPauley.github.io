@@ -1,3 +1,27 @@
-h1 
-    {color: #006633;}
+h1 {
+    color: #691500;
+}
 
+h2{
+    color: #a84a32;
+    text-align: center;
+}
+
+h4 {
+    color: #079c62c2;
+}
+
+.philosophy{
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: none;
+    border: none;
+}
+
+.philosophy-p1::first-letter {
+font-size: 150%;
+}
+
+.philosophy-p2 {
+    text-indent: 50px; 
+}
