@@ -19,12 +19,20 @@ h4 {
     align-items: center;
 }
 
+.quote {
+    background: green;
+    justify-content: center;
+    align-content: center;
+}
+
 .wrapper * {
+    display: flex;
+    justify-content: center;
+    align-content: center;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
     grid-gap: 10px;
-    height: 200px;
+    height: 300px;
 }
 
 /*Philosophy Page style*/
