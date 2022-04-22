@@ -11,6 +11,32 @@ h4 {
     color: #079c62c2;
 }
 
+/*About Page style*/
+
+.content * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote {
+   background: blue;
+}
+
+.image {
+    background: green;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
+
+/*Philosophy Page style*/
+
 .philosophy{
     margin-left: 100px;
     margin-right: 100px;
