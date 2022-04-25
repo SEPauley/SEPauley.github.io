@@ -1,3 +1,11 @@
+/*/*
+Author: Sarah Pauley
+    School/ Term: University of Missouri, Spring 2022
+    Developed: April 24, 2022
+    Tested: April 24, 2022,
+            Both Edge and Google Chrome show parsing error on line 211; not sure of solution. 
+*/
+
 /*All Pages*/
 
 
@@ -55,7 +63,7 @@ blockquote {
 .about-container {
     display: grid;
     grid-template-columns: 30% 70%;
-    grid-template-rows: 40% 50% 10%
+    grid-template-rows: 40% 50% 10%;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -135,7 +143,6 @@ blockquote {
     grid-area: 1/2/3/3;
     display: flex;
     justify-content: right;
-    align-items: right;
 }
 
 .Moberly {
@@ -184,22 +191,21 @@ blockquote {
 .philosophy{
     margin-left: 100px;
     margin-right: 100px;
-    padding: none;
+    padding: 0;
     border: none;
 }
 
 .philosophy-p1::first-letter {
-font-size: 150%;
+    font-size: 150%;
 }
 
 .philosophy-p2 {
     text-indent: 50px; 
 }
 
-@media only screen and (max-width: 300px){
+@media only screen and (max-width: 300px) {
     .philosophy {
         margin-left: 30px;
         margin-right: 30px;
     }
-    
 }
