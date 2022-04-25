@@ -1,3 +1,6 @@
+/*All Pages*/
+
+
 h1 {
     color: #691500;
 }
@@ -11,7 +14,19 @@ h4 {
     color: #079c62c2;
 }
 
-/*About Page style*/
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+footer {
+    background-color: #fbd887ff;
+    color: #691500;
+}
+
+body {
+    text-align: center;
+}
 
 .content * {
     display: flex;
@@ -19,21 +34,150 @@ h4 {
     align-items: center;
 }
 
-.quote {
-   background: blue;
+/*About Page style*/
+
+blockquote {
+    color: #a84a32;
 }
 
-.image {
-    background: green;
+.headshot {
+    width: 150px;
 }
 
-.row {
+.video {
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 601px){
+
+.about-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 40% 50% 10%
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Image"
+        "Video"
+        "Resume"
+        "About-Paragraph"
+        "Footer";
+}
+
+.Image {
+    grid-area: 1/1/2/2;
+}
+
+.Video {
+    grid-area: 1/2/2/3;
+}
+
+.Resume {
+    grid-area: 2/1/3/2;
+}
+
+.About-Paragraph {
+    grid-area: 2/2/3/3;
+}
+
+.Footer {
+    grid-area: 3/1/4/3;
+}
+
+}
+    
+@media only screen and (min-width: 750px){
+    .video {
+        width: 500px;
+    }
+
+
+/*Projects Page style*/
+
+.Art-Ref {
+    color: #434343;
+}
+
+.Reflection {
+    color: #165086;
+}
+
+
+@media only screen and (min-width: 850px){
+.Trenton {
     display: flex;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 50% 50%;
+    grid-gap: 20px 50px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Gatsby"
+        "Art-Ref"
+        "Reflection";
+    margin: 20px 100px 50px 50px;
 }
 
-.column {
-    flex: 50%;
+.Gatsby {
+    grid-area: 1/1/2/2;
+    display: block;
 }
+
+.Art-Ref {
+    grid-area: 2/1/2/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Reflection {
+    grid-area: 1/2/3/3;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+}
+
+.Moberly {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 50% 50%;
+    grid-gap: 20px 50px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Artifact"
+        "Art-Ref"
+        "Reflection";
+    margin: 20px 100px 50px 50px;
+}
+
+    .Bitmoji {
+        grid-area: 1/1/2/2;
+        display: block;
+    }
+
+.Jamesport {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 50% 50%;
+    grid-gap: 20px 50px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Artifact"
+        "Art-Ref"
+        "Reflection";
+    margin: 20px 100px 50px 50px;
+}
+
+    .Robot {
+        grid-area: 1/1/2/2;
+        display: block;
+}
+
+}
+
+
+
 
 /*Philosophy Page style*/
 
@@ -50,4 +194,12 @@ font-size: 150%;
 
 .philosophy-p2 {
     text-indent: 50px; 
+}
+
+@media only screen and (max-width: 300px){
+    .philosophy {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    
 }
