@@ -74,6 +74,13 @@ body {
     align-items: center;
 }
 
+/*Home Page style*/
+.indexfooter {
+    height: 200px;
+    background-image: url(footerimage.jpg);
+    background-size: 
+}
+
 /*About Page style*/
 
 blockquote {
