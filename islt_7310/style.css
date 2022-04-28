@@ -15,7 +15,7 @@ Author: Sarah Pauley
 
 @font-face {
     font-family: "FiraSans";
-    src: "FiraSansCondensed-Light.ttf";
+    src: url("FiraSansCondensed-Light.ttf");
 }
 
 h1 {
@@ -90,7 +90,6 @@ blockquote {
     list-style: none;
     text-align: left;
     margin: auto;
-    padding: auto;
     height: fit-content;
 }
 
@@ -165,7 +164,6 @@ blockquote {
     .education {
         font-size: 9pt;
         justify-content: left;
-        align-items: left;
     }
 }
 
