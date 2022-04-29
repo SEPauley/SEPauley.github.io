@@ -81,6 +81,17 @@ body {
     background-size: 
 }
 
+.footerimg {
+width: 20px;
+height: 20px;
+transition: width 0.3s linear 0s;
+}
+
+.footerimg:hover {
+    width: 30px;
+    height:30px;
+}
+
 /*About Page style*/
 
 blockquote {
