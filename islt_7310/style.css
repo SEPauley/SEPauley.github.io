@@ -1,9 +1,8 @@
 /*/*
 Author: Sarah Pauley
     School/ Term: University of Missouri, Spring 2022
-    Developed: April 24, 2022
-    Tested: April 24, 2022,
-            Both Edge and Google Chrome show parsing error on line 211; not sure of solution. 
+    Developed: April 30, 2022
+    Tested: April 30, 2022, passed on Edge and Chrome
 */
 
 /*All Pages*/
@@ -18,10 +17,25 @@ Author: Sarah Pauley
     src: url("FiraSansCondensed-Light.ttf");
 }
 
+@font-face {
+    font-family: "Whisper";
+    src: url("Whisper-Regular.ttf");
+}
+
 h1 {
     color: #691500;
     font-family: "Merriweather", serif;
 }
+
+@media only screen and (min-width: 501px) {
+    h1 {
+        color: #691500;
+        font-family: "Whisper";
+        font-size: 45pt;
+        line-height: 20px;
+    }
+}
+
 
 h2{
     color: #a84a32;
@@ -50,6 +64,10 @@ main {
     border: none;
 }
 
+footer {
+    height: 50px;
+}
+
 @media only screen and (max-width: 850px) {
     main {
         margin-left: 20px;
@@ -74,11 +92,11 @@ body {
     align-items: center;
 }
 
-/*Home Page style*/
-.indexfooter {
-    height: 200px;
-    background-image: url(footerimage.jpg);
-    background-size: 
+
+.footer {
+    height: 50px;
+    background-image: url(glitter.jpg);
+    background-size: 100%;
 }
 
 .footerimg {
@@ -92,6 +110,31 @@ transition: width 0.3s linear 0s;
     height:30px;
 }
 
+/*Home Page style*/
+
+@media only screen and (min-width: 501px) {
+.welcome {
+    background-image: url(welcome_pic.jpg);
+    opacity: 0.75;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.welcome_text {
+    color: white;
+    font-size: 25pt;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+}
+
 /*About Page style*/
 
 blockquote {
@@ -101,6 +144,9 @@ blockquote {
 
 .headshot {
     width: 150px;
+    padding: 1px;
+    border: 2px solid #434343;
+    margin: auto;
 }
 
 .education {
@@ -125,6 +171,9 @@ blockquote {
 .video {
     align-items: center;
     justify-content: center;
+    margin: auto;
+    height: 100%;
+    width: 100%;
 }
 
 @media only screen and (min-width: 601px){
@@ -240,6 +289,20 @@ blockquote {
     color: #165086;
 }
 
+.Gatsby, .Bitmoji, .Robot{
+    padding: 1px;
+    border: 2px solid #434343;
+    margin: auto;
+}
+
+@media only screen and (max-width: 1100px){
+    .projectsmain {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 0;
+        border: none;
+    }
+}
 
 @media only screen and (min-width: 850px){
 .Trenton {
@@ -288,6 +351,7 @@ blockquote {
     .Bitmoji {
         grid-area: 1/1/2/2;
         display: block;
+        width: 100%;
     }
 
 .Jamesport {

@@ -6,8 +6,8 @@
     Use: to provide information about projects I have created/ completed during various jobs.
     Author: Sarah Pauley
     School/ Term: University of Missouri, Spring 2022
-    Developed: April 24, 2022
-    Tested: April 24, 2022, passed on Microsoft Edge and Google Chrome
+    Developed: April 30, 2022
+    Tested: April 30, 2022, passed on Microsoft Edge and Google Chrome
 -->
 
 <head>
@@ -25,6 +25,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
 </head>
 
 <body>
@@ -38,9 +40,9 @@
             <li> <a href="about.html"> About </a> </li>
             <li> <a href="projects.html"> Projects </a> 
                 <ul>
-                    <li>Link 1</li>
-                    <li>Link 2</li>
-                    <li>Link 3</li>
+                    <li> <a href="projects.html#THS"> Trenton </a> </li>
+                    <li> <a href="projects.html#MHS"> Moberly </a> </li>
+                    <li> <a href="projects.html#Trico"> Tri-County </a></li>
                 </ul>
                 </li>
             <li> <a href="reflection.html"> Philosophy</a> </li>
@@ -48,9 +50,12 @@
         </ul>
     </nav>
 
+<main class="projectsmain">
+
     <h2>Projects</h2>
 
-   <h2>Trenton High School</h2> 
+
+   <h2 id="THS">Trenton High School</h2> 
    <h4>High School English Teacher, August 2021-present</h4>
 
 <div class="Trenton">
@@ -64,7 +69,7 @@
     standard. As the sole LA III teacher at THS, I have great flexibility when it comes to curriculum. I have used this 
     flexibility to prioritize authentic, in-depth learning over covering the maximum amount of content. These experiences include the class blog discussed here.</p>
 
-    <img id="Gatsby" src="gatsby.jpg" alt="Gatsby blog" width="300">
+    <img class="Gatsby" src="gatsby.jpg" alt="Gatsby blog" width="300">
 
     <p class="Art-Ref"> One project that I am especially proud of is the Great Gatsby Class Blog. I adapted this project from a more 
     traditional culminating project where students create a newspaper at the end of a unit. In this project, 
@@ -76,7 +81,7 @@
 
 </div>
 
-    <h2>Moberly High School</h2>
+    <h2 id="MHS">Moberly High School</h2>
     <h4>High School English, August 2020-May 2021</h4>
 
 <div class="Moberly">
@@ -95,7 +100,7 @@
         planning the curriculum. Because multiple teachers taught the same course, we were expected to be on the 
         same page. </p>
 
-    <img id="Bitmoji" src="bitmoji.jpg" alt="Bitmoji Classroom Video" width="300">
+    <img class="Bitmoji" src="bitmoji.jpg" alt="Bitmoji Classroom Video" width="300">
 
 
     <p class="Art-Ref">This video was one of the best resources I created for my online students. I created a digital classroom on 
@@ -105,7 +110,7 @@
 
 </div>
 
-    <h2>Tri-County High School</h2>
+    <h2 id="Trico">Tri-County High School</h2>
     <h4>5th-8th Grade English, August 2017-May 2020</h4>
 
 <div class="Jamesport">
@@ -126,7 +131,7 @@
     such as The Outsiders for 7th graders. In all grade levels, I emphasized writing. Students wrote fiction, 
     research papers, and procedural writing. </p>
 
-    <img id="Robot" src="robot.jpg" alt= "Robot Alien Clone student work" width="300">
+    <img class="Robot" src="robot.jpg" alt= "Robot Alien Clone student work" width="300">
 
     <p class="Art-Ref">The Robot Alien Clones project was a brief unit I created for 5th grade writing. It involved procedural 
         writing and compare/ contrast writing. First, I created “robot aliens” using Styrofoam cups, pipe cleaners, 
@@ -139,9 +144,16 @@
 
 </div>
 
-<footer>
-    <p>Sarah Pauley sepgh6@umsystem.edu Copyright 2022, Sarah Pauley</p>
-</footer>   
+</main>
+
+<footer class="footer">
+    <p>Sarah Pauley 
+        <img class="footerimg" src="icons8-mail-50.png" alt="mail icon"> 
+        sepgh6@umsystem.edu
+        <img class="footerimg" src="icons8-phone-50.png" alt="phone icon"> 
+        1+888-888-8888 
+        Copyright 2022, Sarah Pauley</p>
+</footer>
 
 </body>
 </html>
