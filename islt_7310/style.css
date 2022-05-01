@@ -55,6 +55,7 @@ h4 {
 p {
     font-family: "FiraSans", sans-serif;
     font-size: 14pt;
+    line-height: 1.5;
 }
 
 main {
@@ -74,6 +75,11 @@ footer {
         margin-right: 20px;
         padding: 0;
         border: none;
+    }
+
+    p {
+        line-height: 1.25;
+        font-size: 12pt;
     }
 }
 
