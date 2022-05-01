@@ -287,6 +287,38 @@ blockquote {
 
 /*Projects Page style*/
 
+table {
+   width: 400px;
+   margin: auto;
+}
+
+tbody {
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    background-color:#079c62c2;
+}
+
+tr:nth-child(even){
+    background-color: #ededed;
+}
+
+tbody:nth-child(odd) {
+    background-color: #c4c4c4;
+}
+
+
+
 .Art-Ref {
     color: #434343;
 }
@@ -311,6 +343,10 @@ blockquote {
 }
 
 @media only screen and (min-width: 850px){
+
+table {
+    width: 600px;
+}
 .Trenton {
     display: flex;
     display: grid;
