@@ -442,3 +442,36 @@ table {
         margin-right: 30px;
     }
 }
+
+/*Contact page style */
+
+form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+label {
+    float: left;
+    display: flex;
+    flex-direction: row;
+    width: 15%;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    margin-right: .5em;
+}
+
+input, textarea {
+    margin-bottom: 1em;
+    width: 50%;
+    margin-left: 1em!important;
+}
+
+.submit {
+    margin-left: 7em;
+    width: 100px;
+    text-align: center;
+}
