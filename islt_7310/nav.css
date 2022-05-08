@@ -1,8 +1,8 @@
 /*
 Author: Sarah Pauley
     School/ Term: University of Missouri, Spring 2022
-    Developed: April 30, 2022
-    Tested: April 30, 2022, passed on Microsoft Edge and Google Chrome
+    Developed: May 7, 2022
+    Tested: May 7, 2022, passed on Microsoft Edge and Google Chrome
 */
 
 @font-face {
@@ -61,16 +61,18 @@ nav a {
     padding: 15px; 
 }
 
-nav a:link {
-    color: #691500;
-}
-
-nav a:hover, nav a:focus {
+nav a:link, nav a:visited {
+    color: #A8742E;
     font-weight: bold;
 }
 
-nav a:active {
-    font-weight: bolder;
+nav a:visited {
+    color:  #A8742E;
+}
+
+nav a:hover, nav a:focus {
+    color: #B85B01;
+    font-size: 13pt;
 }
 
 nav ul>li ul{
@@ -106,7 +108,7 @@ nav>ul>li:hover>ul {
         display: flex;
         align-items: center;
         justify-content: center;
-        border-bottom: 2px solid #691500;
+        border-bottom: 2px solid black;
         width: 100%;
         height: 30px;
     }

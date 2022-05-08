@@ -6,8 +6,8 @@
     Use: to allow viewers to contact me
     Author: Sarah Pauley
     School/ Term: University of Missouri, Spring 2022
-    Developed: May 1, 2022
-    Tested: May 1, 2022, passed on Microsoft Edge and Google Chrome
+    Developed: May 7, 2022
+    Tested: May 7, 2022, passed on Microsoft Edge and Google Chrome
 -->
 
 <head>
@@ -21,7 +21,7 @@
     <link rel="stylesheet"
     href="nav.css">
 
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="newfav.ico">
 </head>
 
 <body>
@@ -50,29 +50,49 @@
 
     <h2>Contact Me</h2>
 
-    <form action="mailto:sepgh6@umsystem.edu?Subject=Portfolio/Professional%20Website%20Contact" method="post" enctype="text/plain">
-        <div>
-            <label for="firstname">First Name</label>
-            <input type="text" id="firstname">
+    <div class="contact">
+    <form action="mailto:sepgh6@umsystem.edu?Subject=Portfolio/Professional%20Website%20Contact" method="post" enctype="text/plain" >
+        <div class="row">
+            <div class="col-25">
+                <label for="firstname">First Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="firstname" placeholder="Your first name" required>
+            </div>
         </div>
 
-        <div>
-            <label for="lastname">Last Name</label>
-            <input type="text" id="lastname">
+        <div class="row">
+            <div class="col-25">
+                <label for="lastname">Last Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="lastname" placeholder="Your last name" required>
+            </div>
         </div>
 
-        <div>
-            <label for="email">Email</label>
-            <input type="text" id="Email">
+        <div class="row">
+            <div class="col-25">
+                <label for="Email">Email</label>
+            </div>
+            <div class="col-75">
+                <input type="email" id="Email" placeholder="Your email address" required>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-25">
+                <label for="message">Message</label>
+            </div>
+            <div class="col-75">
+                <textarea name="message" id="message" placeholder="Your message" required></textarea>
+            </div>
         </div>
 
-        <div>
-            <label for="message">Message</label>
-            <textarea></textarea>
-        </div>
-
+        <div class="col-75">
         <input type="submit" class="submit">
+        </div>
     </form>
+    </div>
 
 
     </main>

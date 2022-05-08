@@ -1,8 +1,8 @@
 /*/*
 Author: Sarah Pauley
     School/ Term: University of Missouri, Spring 2022
-    Developed: April 30, 2022
-    Tested: April 30, 2022, passed on Edge and Chrome
+    Developed: May 7, 2022
+    Tested: May 7, 2022, passed on Edge and Chrome
 */
 
 /*All Pages*/
@@ -23,28 +23,37 @@ Author: Sarah Pauley
 }
 
 h1 {
-    color: #691500;
-    font-family: "Merriweather", serif;
+    color: #165086;
+    font-family: "Whisper";
+    font-size: 30pt;
 }
 
 @media only screen and (min-width: 501px) {
     h1 {
-        color: #691500;
+        color: #165086;
         font-family: "Whisper";
         font-size: 45pt;
-        line-height: 20px;
+        line-height: .1px;
+    }
+
+    .Header {
+        display: flex;
+        position: relative;
+        text-align: center;
+        justify-content: center;
+        background-color: #fbd887ff;
     }
 }
 
 
 h2{
-    color: #a84a32;
+    color: #165086;
     text-align: center;
     font-family: "Merriweather", serif;
 }
 
 h3 {
-    font-family: "FiraSans", sans-serif;
+    font-family: "Merriweather", serif;
 }
 
 h4 {
@@ -52,10 +61,39 @@ h4 {
     font-family: "Merriweather", serif;
 }
 
+h5 {
+    font-family: "Times New Roman", serif;
+    font-size: 16pt;
+    line-height: 1;
+}
+
 p {
-    font-family: "FiraSans", sans-serif;
-    font-size: 14pt;
+    font-family: "Times New Roman", serif;
+    font-size: 12pt;
     line-height: 1.5;
+    color: black;
+}
+
+ul li {
+    font-family: "Times New Roman", serif;
+    font-size: 12pt;
+}
+
+a:link {
+    color: #165086;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited {
+    color:  #165086;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #2483db;
+    font-size: 13pt;
 }
 
 main {
@@ -63,6 +101,11 @@ main {
     margin-right: 100px;
     padding: 0;
     border: none;
+}
+
+.return {
+    margin-bottom: 50px;
+    text-align: center;
 }
 
 footer {
@@ -83,11 +126,6 @@ footer {
     }
 }
 
-footer {
-    background-color: #fbd887ff;
-    color: #691500;
-}
-
 body {
     text-align: center;
 }
@@ -103,6 +141,7 @@ body {
     height: 50px;
     background-image: url(glitter.jpg);
     background-size: 100%;
+    color: #165086;
 }
 
 .footerimg {
@@ -118,34 +157,80 @@ transition: width 0.3s linear 0s;
 
 /*Home Page style*/
 
-@media only screen and (min-width: 501px) {
+.intro {
+    text-align: left;
+    line-height: 1.5;
+    margin: auto;
+}
+
+.welcome1 {
+    color: #870017;
+    font-family: "Whisper";
+    font-size: 30pt;
+}
+
+.welcome2 {
+    color: #165086;
+}
+
+@media only screen and (min-width: 700px) {
 .welcome {
-    background-image: url(welcome_pic.jpg);
-    opacity: 0.75;
-    display: flex;
-    flex-direction: column;
-    background-size: cover;
+    background-image: url(fantasybook.jpg);
+    opacity: 0.8;
+    margin-top: 20px;
+    background-size: contain;
+    padding: 0;
     height: 500px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    position: relative;
 }
 
 .welcome_text {
-    color: white;
-    font-size: 25pt;
-    position: absolute;
-    top: 65%;
+    text-align: center;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    position: absolute;
+    font-size: 20pt;
 }
+
+.welcome1 {
+    font-family:"Whisper";
+    font-size: 45pt;
+    line-height: 1;
+    margin: 0;
+    color: #870017;
+    text-shadow: 0.25px 0.25px black;
 }
+
+.welcome2 {
+    font-size: 20pt;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.intro {
+   max-width: 850px;
+}
+
+.intro p{
+    font-size: 14pt !important;
+}
+
+a:hover, a:focus {
+    font-size: 15pt;
+}
+
+}
+
+
+
 
 /*About Page style*/
 
 blockquote {
-    color: #a84a32;
-    font-family: "FiraSans", sans-serif;
+    color: #079c62c2;
 }
 
 .headshot {
@@ -183,6 +268,12 @@ blockquote {
 }
 
 @media only screen and (min-width: 601px){
+
+blockquote {
+    font-family: "Whisper", sans-serif;
+    font-size: 30pt; 
+    line-height:1;
+}
 
 .about-container {
     display: flex;
@@ -310,28 +401,40 @@ th {
 }
 
 tr:nth-child(even){
-    background-color: #ededed;
+    background-color: #fef7e6;
 }
 
 tbody:nth-child(odd) {
-    background-color: #c4c4c4;
-}
-
-
-
-.Art-Ref {
-    color: #434343;
+    background-color: #fdefce;
 }
 
 .Reflection {
-    color: #165086;
+    height: fit-content;
 }
 
-.Gatsby, .Bitmoji, .Robot{
+.Gatsby, .Bitmoji, .Applewhites{
     padding: 1px;
     border: 2px solid #434343;
     margin: auto;
+    transition: width 0.3s linear 0s;
 }
+
+.Gatsby {
+    height: contain;
+}
+        
+.Gatsby:hover {
+    width: 220px;
+        }
+        
+.Bitmoji:hover {
+    width: 220px;
+}
+
+.Applewhites:hover {
+    width: 220px;
+}
+
 
 @media only screen and (max-width: 1100px){
     .projectsmain {
@@ -350,8 +453,8 @@ table {
 .Trenton {
     display: flex;
     display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 60% 40%;
     grid-gap: 20px 50px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -368,7 +471,7 @@ table {
 
 .Art-Ref {
     grid-area: 2/1/2/2;
-    display: flex;
+    display: block;
     justify-content: flex-start;
 }
 .Reflection {
@@ -379,7 +482,7 @@ table {
 
 .Moberly {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
     grid-gap: 20px 50px;
     grid-auto-flow: row;
@@ -393,13 +496,12 @@ table {
     .Bitmoji {
         grid-area: 1/1/2/2;
         display: block;
-        width: 100%;
     }
 
 .Jamesport {
     display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 52% 48%;
     grid-gap: 20px 50px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -409,7 +511,7 @@ table {
     margin: 20px 100px 50px 50px;
 }
 
-    .Robot {
+    .Applewhites {
         grid-area: 1/1/2/2;
         display: block;
 }
@@ -420,13 +522,6 @@ table {
 
 
 /*Philosophy Page style*/
-
-.philosophy{
-    margin-left: 100px;
-    margin-right: 100px;
-    padding: 0;
-    border: none;
-}
 
 .philosophy-p1::first-letter {
     font-size: 150%;
@@ -445,33 +540,26 @@ table {
 
 /*Contact page style */
 
-form {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+
+.contact {
     width: 100%;
-}
-label {
-    float: left;
-    display: flex;
-    flex-direction: row;
-    width: 15%;
-    justify-content: flex-end;
-    align-items: center;
-    text-align: right;
-    margin-right: .5em;
 }
 
 input, textarea {
-    margin-bottom: 1em;
-    width: 50%;
-    margin-left: 1em!important;
+    width: 60%;
 }
 
 .submit {
-    margin-left: 7em;
     width: 100px;
-    text-align: center;
+}
+
+.col-25 {
+    width: 25%;
+    float: left;
+    margin-top: 6px;
+}
+
+.col-75 {
+    width: 75%;
+    margin-top: 6px;
 }
