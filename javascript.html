@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Add an icon to the map</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="http://sisltweb.missouri.edu/cs-edu/js/exif.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css" rel="stylesheet" />
+<style>
+body { margin: 0; padding: 0; }
+#mapContainer { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+  <div id="mapContainer"></div>
+  
+  <script>
+
+    //This section sets up Mapbox
+    mapboxgl.accessToken = "pk.eyJ1Ijoic3BhdWxleSIsImEiOiJjbDVzdnl2dzgwOXA3M2NueHk0ZGd5NHJhIn0.2sgK-hG-voKYLyiaASVSZw"
+    var map = new mapboxgl.Map({
+      container: "mapContainer", // this must match the id of a `div` on the page
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-92.3300, 38.9448], // latitude, longitude
+      zoom: 16
+    });
+
+    //This provide image urls
+	var imageUrls = [
+        "http://sisltweb.missouri.edu/cs-edu/images/memorial-union-002-sm.jpg",
+        "http://sisltweb.missouri.edu/cs-edu/images/quad-columns-sm.jpg",
+        "http://sisltweb.missouri.edu/cs-edu/images/tiger-plaza-snow-sm.jpg",
+	];
+
+    //This section converts the latitude from an array to a decimal
+        function latitudeToDecimal(lat, latRef) {
+            var lat1 = lat[0] + (lat[1]/60) + (lat[2]/3600);
+            if (latRef == "S") {
+                lat1 = lat1 * -1;
+            }
+            return lat1;
+        };
+
+    //This section converts the longitude from an array to a deciaml
+        function longitudeToDecimal (lon, lonRef) {
+            var lon1 = lon[0] + (lon[1]/60) + (lon[2]/3600);
+            if (lonRef == "W") {
+                lon1 = lon1 * -1;
+            }
+            return lon1;
+        };
+
+    //This section creates a new id for each image when you loop through the image urls
+    var id = 0;
+
+    function newId(){
+        id += 1;
+        return id.toString();
+    }
+
+    map.on('load', function() {
+
+        //The for loop is repeated for the length of the image urls list
+        //We iterate through all three images
+        for (var i = 0; i < imageUrls.length; ++i) {
+            
+            //the variable imageUrl equal whatever element of the variable imageUrls we are currently on
+            //this works because imageUrls is an index
+            let imageUrl = imageUrls[i];
+
+            let image = new Image();
+            image.src = imageUrl;
+            image.onload = function(){
+
+                EXIF.getData(image, function(){
+
+                    //This is where we get the EXIF data for each image
+                    let lat = EXIF.getTag(this, "GPSLatitude");
+                    let latRef = EXIF.getTag(this, "GPSLatitudeRef"); //get latitude Reference - N or S
+                    let lon = EXIF.getTag(this, "GPSLongitude");
+                    let lonRef = EXIF.getTag(this, "GPSLongitudeRef"); //get longitude Reference - E or W
+
+                    //latitude and longitude will be rewritten as decimals using the earlier function
+                    let latDec = latitudeToDecimal(lat,latRef);
+                    let lonDec = longitudeToDecimal(lon,lonRef);
+
+                    map.loadImage(imageUrl, function(error, image){
+
+                        //for the image, layer, and source, we used the newId function
+                        //we are creating a new string for each new image in the loop
+                        //that strings are then used to place the images on the map
+                        let imageId = newId();
+                        let layerId = newId();
+                        let sourceId = newId();
+
+                        map.addImage(imageId, image);
+                        map.addSource(sourceId, {
+                            "type": "geojson",
+                            "data": {
+                                "type": "Feature",
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [lonDec, latDec] //on Mapbox, longitude comes before latitude!
+                                },
+                            },
+                        });
+                        map.addLayer({
+                            "id": layerId,
+                            "type": "symbol",
+                            "source": sourceId,
+                            "layout": {
+                                "icon-image": imageId,
+                                "icon-size": 0.5,
+                            }
+                        });
+                    });
+                });
+            };
+
+        }
+    });
+  </script>
+</body>
+</html>
